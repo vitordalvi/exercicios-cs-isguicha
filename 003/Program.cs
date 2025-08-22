@@ -42,7 +42,7 @@ class Program
                     break;
 
                 case "n":
-                    Console.WriteLine("Programa finalizado");
+                    Console.WriteLine("\nPrograma finalizado");
                     status = false;
                     break;
 
