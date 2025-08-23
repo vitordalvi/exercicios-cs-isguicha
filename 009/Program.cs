@@ -38,6 +38,10 @@ class Program
                         Console.WriteLine("\nPrograma finalizado!");
                         status = false;
                         break;
+
+                    default:
+                        Console.WriteLine("Opção inválida!");
+                        break;
                 }
             }
         }
