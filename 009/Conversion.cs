@@ -2,9 +2,17 @@
 {
     public class Conversion
     {
-        public double FahrenheitToCelcius(double fahrenheit)
+        public double FahrenheitToCelcius(string input)
         {
-            return (fahrenheit - 32) * 5/9; 
+            if (double.TryParse(input, out double fahrenheit))
+            {
+                return (fahrenheit - 32 * 5 / 9);
+            }
+
+            else
+            {
+                throw new FormatException("O valor inserido é inválido!");
+            } 
         }
     }
 }

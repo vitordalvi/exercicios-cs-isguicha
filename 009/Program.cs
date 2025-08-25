@@ -15,11 +15,8 @@ class Program
             while (status)
             {
                 Console.Write("Digite o valor em fahrenheit: ");
-                
-                if (!double.TryParse(Console.ReadLine(), out double fahrenheitValue))
-                {
-                    Console.WriteLine("O valor é inválido. Tente novamente!");
-                }
+
+                string fahrenheitValue = Console.ReadLine();
 
                 double res = convert.FahrenheitToCelcius(fahrenheitValue);
 
