@@ -16,10 +16,7 @@ namespace _010
             {
                 Console.Write("Digite a quantidade em celcius: ");
 
-                if (!double.TryParse(Console.ReadLine(), out double celcius))
-                {
-                    Console.WriteLine("O valor é inválido. Tente novamente!");
-                }
+                string celcius = Console.ReadLine();
 
                 double res = convert.CelciusToFahrenheit(celcius);
 
