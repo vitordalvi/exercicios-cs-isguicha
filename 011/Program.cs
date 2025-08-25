@@ -38,7 +38,7 @@ namespace _011
                 Console.WriteLine($"Resultado da terceira operação: {res3.ToString("0.00")}");
 
                 Console.WriteLine("Você deseja fazer mais cálculos? (S/N): ");
-                string op = Console.ReadLine();
+                string op = Console.ReadLine().ToLowerInvariant();
 
                 switch (op)
                 {
