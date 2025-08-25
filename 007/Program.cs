@@ -22,7 +22,7 @@ class Program
             Console.WriteLine("O valor do dobro da área é: " + res);
 
             Console.Write("Você deseja fazer mais cálculos? (S/N): ");
-            string op = Console.ReadLine();
+            string op = Console.ReadLine().ToLowerInvariant();
 
             switch (op)
             {

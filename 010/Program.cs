@@ -23,7 +23,7 @@ namespace _010
                 Console.WriteLine("O valor de " + celcius + "C° é: " + res + "F°.");
 
                 Console.Write("Você deseja fazer mais conversões? (S/N): ");
-                string op = Console.ReadLine();
+                string op = Console.ReadLine().ToLowerInvariant();
 
                 switch (op)
                 {

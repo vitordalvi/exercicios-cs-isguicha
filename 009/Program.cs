@@ -23,7 +23,7 @@ class Program
                 Console.WriteLine("O valor de " + fahrenheitValue + "F° é: " + res.ToString("0.00") + "C°.");
 
                 Console.Write("Você deseja fazer mais contas? (S/N): ");
-                string op = Console.ReadLine();
+                string op = Console.ReadLine().ToLowerInvariant();
 
                 switch (op)
                 {

@@ -21,7 +21,7 @@ class Program
             Console.WriteLine("O valor da área é: " + area.ToString("0.00"));
 
             Console.Write("Você deseja fazer mais conversões? (S/N): ");
-            string op = Console.ReadLine();
+            string op = Console.ReadLine().ToLowerInvariant();
 
             switch (op)
             {
