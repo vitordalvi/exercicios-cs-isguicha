@@ -12,26 +12,52 @@ namespace _011
     {
         public static void Main(string[] args)
         {
-            Calculator calculator = new Calculator();
-            Verifier verifier = new Verifier();
+            bool status = true;
 
-            Console.Write("Digite o primeiro valor inteiro: ");
-            int n1 = Verifier.VerifyIntegerInput();
+            while (status)
+            {
+                Calculator calculator = new Calculator();
+                Verifier verifier = new Verifier();
 
-            Console.Write("Digite o segundo valor inteiro: ");
-            int n2 = verifier.VerifyInteger(Console.ReadLine());
+                Console.Write("Digite o primeiro valor inteiro: ");
+                int n1 = Verifier.VerifyIntegerInput();
 
-            Console.Write("Digite o valor real: ");
-            double n3 = verifier.VerifyDouble(Console.ReadLine());
+                Console.Write("Digite o segundo valor inteiro: ");
+                int n2 = verifier.VerifyInteger(Console.ReadLine());
 
-            int res1 = calculator.FirstCalc(n1, n2);
-            Console.WriteLine($"Resultado da primeira operação: {res1.ToString("0.00")}");
+                Console.Write("Digite o valor real: ");
+                double n3 = verifier.VerifyDouble(Console.ReadLine());
 
-            double res2 = Math.Round(calculator.SecondCalc(n1, n3));
-            Console.WriteLine($"Resultado da segunda operação: {res2.ToString("0.00")}");
+                int res1 = calculator.FirstCalc(n1, n2);
+                Console.WriteLine($"Resultado da primeira operação: {res1.ToString("0.00")}");
 
-            double res3 = Math.Round(calculator.thirdCalc(n3));
-            Console.WriteLine($"Resultado da terceira operação: {res3.ToString("0.00")}");
+                double res2 = Math.Round(calculator.SecondCalc(n1, n3));
+                Console.WriteLine($"Resultado da segunda operação: {res2.ToString("0.00")}");
+
+                double res3 = Math.Round(calculator.thirdCalc(n3));
+                Console.WriteLine($"Resultado da terceira operação: {res3.ToString("0.00")}");
+
+                Console.WriteLine("Você deseja fazer mais cálculos? (S/N): ");
+                string op = Console.ReadLine();
+
+                switch (op)
+                {
+                    case "s":
+                        status = true;
+                        break;
+
+                    case "n":
+                        Console.WriteLine("\nPrograma finalizado!");
+                        status = false;
+                        break;
+
+                    default:
+                        Console.WriteLine("Valor inválido");
+                        break;
+                }
+            }
+
+            
         }
     }
 }
